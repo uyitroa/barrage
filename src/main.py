@@ -29,15 +29,15 @@ def sendmail(subject, my_string):
 	server.send_message(msg)
 
 
-def getdepth():
-	return 101
+def check():
+	return true
 
 
 def main():
 	while True:
-		x = getdepth()
+		is_dangerous = check() # type : boolean
 
-		if x > 100:
+		if is_dangerous:
 			sendsms("Barrage is dead")
 			sendmail("Barrage", "Barrage is dead")
 
