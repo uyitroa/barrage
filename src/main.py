@@ -3,6 +3,7 @@ from email.message import EmailMessage
 import smtplib
 import os
 
+
 def sendsms(my_string):
 	account_sid = 'AC226ab8ec94356e0e3d7e34614032f855'
 	auth_token = 'ea20f94d90faa85e59378366eb6e218a'
