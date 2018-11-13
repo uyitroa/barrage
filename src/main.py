@@ -30,7 +30,7 @@ def sendmail(subject, my_string):
 
 
 def check():
-	return true
+	return True
 
 
 def main():
