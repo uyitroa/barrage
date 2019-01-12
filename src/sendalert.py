@@ -19,7 +19,7 @@ def sendmail(subject, my_string):
 	server = smtplib.SMTP('smtp.gmail.com', 587)
 	server.starttls()
 
-	server.login('snkraishin87@gmail.com', 'rairyuuaottg')
+	server.login('snkraishin87@gmail.com', 'encrypted')
 	msg = EmailMessage()
 	msg.set_content(my_string)
 
