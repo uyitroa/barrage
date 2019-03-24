@@ -9,7 +9,7 @@ def cleanAndExit():
     GPIO.cleanup()
     print "Bye!"
     sys.exit()
-
+os.system("python3.5 discord_send.py")
 hx = HX711(19, 21)
 
 # I've found out that, for some reason, the order of the bytes is not always the same between versions of python, numpy and the hx711 itself.
@@ -47,11 +47,11 @@ while True:
         
         # Prints the weight. Comment if you're debbuging the MSB and LSB issue.
         # val = hx.get_weight(5)
-	val = max(0, int(hx.read_long()))
-        print val
-	if val > limit:
+	#val = max(0, int(hx.read_long()))
+        force = int(hx.read_long()) - 120000
+	if force > limit:
             print "La force de l'eau depasse la limite. Sending alert..."
-            os.system("python3.5 sendalert.py")
+            os.system("echo " + force + " > water_force.txt")
         # To get weight from both channels (if you have load cells hooked up 
         # to both channel A and B), do something like this
         #val_A = hx.get_weight_A(5)

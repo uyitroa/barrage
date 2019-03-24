@@ -30,7 +30,7 @@ def sendmail(subject, my_string):
 
 def main():
     sendsms("Barrage is dead")
-    sendmail("Barrage", "Barrage is dead")
+    #sendmail("Barrage", "Barrage is dead")
 
 
 main()
